@@ -5,15 +5,15 @@ import ContextProvider from './Provider/ContextProvider.jsx'
 import {Provider }from 'react-redux';
 import store from './redux/store.js';
 import { Toaster } from 'react-hot-toast';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 
 createRoot(document.getElementById('root')).render(
   <ContextProvider>
     <Provider store={store}>
     <Toaster position="bottom-right" reverseOrder={false}/>
-    <BrowserRouter>
+    <HashRouter>
     <App />
-    </BrowserRouter>
+    </HashRouter>
     </Provider>
   </ContextProvider>
 )
